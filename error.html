@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Stackly: Page Not Found</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="img/icon.webp" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f7fb;
+            font-family: 'Nunito', 'Heebo', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        /* Float & Pulse Keyframes */
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.05); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.2; }
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 3rem;
+            max-width: 600px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(24, 29, 56, 0.08);
+            position: relative;
+        }
+
+        .error-icon-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            animation: floatAnimation 4s ease-in-out infinite;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            line-height: 1;
+            color: #181d38;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        .error-code span {
+            color: #fb873f;
+        }
+
+        .floating-book {
+            font-size: 3.5rem;
+            color: #fb873f;
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            transform: rotate(15px);
+        }
+
+        .error-message {
+            color: #181d38;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .error-description {
+            color: #7f8c8d;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-home {
+            background-color: #fb873f;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 35px;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(251, 135, 63, 0.3);
+        }
+
+        .btn-home:hover {
+            background-color: #181d38;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(24, 29, 56, 0.3);
+        }
+
+        /* Background Decorative Elements */
+        .bg-circle {
+            position: absolute;
+            background: #fb873f;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulseGlow 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-circle" style="width: 300px; height: 300px; top: -10%; left: -10%;"></div>
+    <div class="bg-circle" style="width: 200px; height: 200px; bottom: -5%; right: -5%; animation-delay: 3s;"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6">
+                <div class="error-container mx-auto">
+                    
+                    <div class="error-icon-wrapper">
+                        <h1 class="error-code">4<span>0</span>4</h1>
+                        <i class="fas fa-book-open floating-book"></i>
+                    </div>
+
+                    <h2 class="error-message display-6">Course Path Restricted</h2>
+                    <p class="error-description">
+                        The course enrollment processing gateway is currently being optimized. Please sign up or check your profile dashboard workspace to review active registration links.
+                    </p>
+
+                    <a href="index.html" class="btn btn-home">
+                        <i class="fas fa-home me-2"></i>Back To Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
